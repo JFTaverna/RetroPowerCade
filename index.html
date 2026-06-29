@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>RetroPowerCade</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Michroma&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo" id="animated-logo"></div>
+
+      <h1>🎮 RETRO-POWER-CADE 🎮</h1>
+
+      <p class="tagline">Insert Coin to Continue...</p>
+
+      <nav class="navbar">
+        <a href="#fcade-g">FightCade-Guia</a>
+        <a href="#cheats">Retro-Arch</a>
+        <a href="#consolas">Consolas</a>
+        <a href="#juegos">Juegos Gratis</a>
+      </nav>
+    </header>
+
+    <div class="description">
+      <img class="intro" src="./assets/images.jpg" alt="Retro Consoles" />
+
+      <p>
+        Los videojuegos son más que entretenimiento: son recuerdos, aventuras y
+        momentos que nos acompañan toda la vida. RetroPowerCade nace para
+        compartir esas experiencias, descubrir joyas del pasado y ayudar a
+        disfrutar del gaming retro de forma legal y gratuita.
+      </p>
+    </div>
+
+    <section class="start">
+      <div class="parrafos-ul-titulo">
+        <h2>¿Por dónde empezar?</h2>
+
+        <p>
+          En esta guía veremos algunas herramientas útiles para empezar, desde
+          plataformas para jugar online hasta opciones para organizar tus juegos
+          retro de manera sencilla.
+        </p>
+
+        <ul>
+          <li>Elegir una plataforma para jugar.</li>
+          <li>Configurar un mando cómodo.</li>
+          <li>Aprender lo básico de emulación.</li>
+          <li>Buscar juegos legales y gratuitos.</li>
+        </ul>
+      </div>
+      <img
+        class="start-img top-left"
+        src="./assets/goodtimes.jpg"
+        alt="Retro decoration"
+      />
+
+      <img
+        class="start-img bottom-right"
+        src="./assets/consolas.jpg"
+        alt="Retro decoration"
+      />
+    </section>
+
+    <section id="fcade-g" class="emulators">
+      <h2>Plataformas recomendadas</h2>
+
+      <h3>Fightcade</h3>
+
+      <img class="fcade" src="./assets/fightcade.jpg" alt="Fightcade" />
+
+      <p>
+        Fightcade es una plataforma para jugar videojuegos retro online contra
+        otras personas. Está muy enfocada en juegos arcade, especialmente juegos
+        de pelea como Street Fighter, The King of Fighters, Marvel vs Capcom,
+        Metal Slug y muchos más.
+      </p>
+
+      <p>
+        Nació como una alternativa moderna al antiguo sistema GGPO, una
+        tecnología creada para mejorar el juego online en títulos de pelea
+        usando rollback netcode. Fightcade tomó esa idea y la convirtió en una
+        plataforma más accesible, con salas, chat, rankings, partidas online y
+        soporte para muchos sistemas retro.
+      </p>
+
+      <h3>Requerimientos básicos</h3>
+
+      <p>
+        Fightcade está disponible para Windows, macOS y Linux. No necesita un
+        ordenador muy potente, porque la mayoría de juegos son retro, pero sí
+        conviene tener:
+      </p>
+
+      <img
+        class="fcade2"
+        src="./assets/fightcademulti.png"
+        alt="Fightcade game list"
+      />
+
+      <ul>
+        <li>Un PC o Mac relativamente moderno</li>
+        <li>Windows, macOS o Linux</li>
+        <li>Buena conexión a internet</li>
+        <li>Mando o arcade stick recomendado</li>
+        <li>Archivos ROM compatibles</li>
+      </ul>
+
+      <img
+        class="ryu"
+        src="./assets/streeth.png"
+        alt="Street Fighter character"
+      />
+
+      <p>
+        Fightcade no incluye los juegos por defecto. Para que los juegos
+        funcionen, es necesario tener los archivos correctos. En muchas
+        instalaciones se usan archivos JSON creados por la comunidad, que
+        permiten automatizar la descarga y ubicación de los archivos necesarios.
+        Si estos JSON no están instalados correctamente, Fightcade puede abrir
+        la sala del juego, pero el juego no cargará.
+      </p>
+
+      <p>
+        <span>Puedes visitar la página oficial de Fightcade desde aquí:</span>
+        <a
+          class="official-link"
+          href="https://www.fightcade.com/"
+          target="_blank"
+        >
+          Fightcade Official Website
+        </a>
+      </p>
+    </section>
+
+    <script>
+      const logo = document.getElementById('animated-logo');
+      const images = [
+        './assets/herops1.png',
+        './assets/herops2.png',
+        './assets/herops3.png',
+        './assets/herops4.png',
+        './assets/herops5.png',
+        './assets/herops6.png'
+      ];
+
+      let currentFrame = 0;
+
+      setInterval(() => {
+        currentFrame = (currentFrame + 1) % images.length;
+        logo.style.backgroundImage = `url('${images[currentFrame]}')`;
+      }, 500);
+    </script>
+  </body>
+</html>

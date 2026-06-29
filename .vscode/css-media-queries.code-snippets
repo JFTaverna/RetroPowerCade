@@ -1,0 +1,110 @@
+{
+  "Media Query Mobile": {
+    "prefix": "mq",
+    "description": "Media query for mobile devices",
+    "body": [
+      "@media (max-width: 480px) {",
+      "  $1",
+      "}"
+    ]
+  },
+  "Media Query Tablet": {
+    "prefix": "mq-t",
+    "description": "Media query for tablet devices",
+    "body": [
+      "@media (min-width: 481px) and (max-width: 1200px) {",
+      "  $1",
+      "}"
+    ]
+  },
+  "Media Query Desktop": {
+    "prefix": "mq-d",
+    "description": "Media query for desktop devices",
+    "body": [
+      "@media (min-width: 1201px) {",
+      "  $1",
+      "}"
+    ]
+  },
+  "Media Query Custom": {
+    "prefix": "mq-c",
+    "description": "Custom media query",
+    "body": [
+      "@media (${1|min-width|max-width}: ${2|768px}) {",
+      "  $0",
+      "}"
+    ]
+  },
+  "Media Query Max Width": {
+    "prefix": "mq-max",
+    "description": "Media query max-width",
+    "body": [
+      "@media (max-width: ${1:768px}) {",
+      "  $0",
+      "}"
+    ]
+  },
+  "Media Query Min Width": {
+    "prefix": "mq-min",
+    "description": "Media query min-width",
+    "body": [
+      "@media (min-width: ${1:768px}) {",
+      "  $0",
+      "}"
+    ]
+  },
+  "Media Query Orientation": {
+    "prefix": "mq-orientation",
+    "description": "Media query orientation",
+    "body": [
+      "@media (orientation: ${1|portrait,landscape}) {",
+      "  $0",
+      "}"
+    ]
+  },
+  "Media Query Hover": {
+    "prefix": "mq-hover",
+    "description": "Media query for devices with hover",
+    "body": [
+      "@media (hover: hover) {",
+      "  $0",
+      "}"
+    ]
+  },
+  "Media Query No Hover": {
+    "prefix": "mq-no-hover",
+    "description": "Media query for touch devices",
+    "body": [
+      "@media (hover: none) {",
+      "  $0",
+      "}"
+    ]
+  },
+  "Media Query Dark Mode": {
+    "prefix": "mq-dark",
+    "description": "Media query for dark mode",
+    "body": [
+      "@media (prefers-color-scheme: dark) {",
+      "  $0",
+      "}"
+    ]
+  },
+  "Media Query Light Mode": {
+    "prefix": "mq-light",
+    "description": "Media query for light mode",
+    "body": [
+      "@media (prefers-color-scheme: light) {",
+      "  $0",
+      "}"
+    ]
+  },
+  "Media Query Reduced Motion": {
+    "prefix": "mq-motion",
+    "description": "Media query for reduced motion preference",
+    "body": [
+      "@media (prefers-reduced-motion: reduce) {",
+      "  $0",
+      "}"
+    ]
+  }
+}

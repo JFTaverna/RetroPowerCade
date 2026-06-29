@@ -1,0 +1,356 @@
+/* =========================
+   GENERAL
+========================= */
+body {
+  background: linear-gradient(
+    135deg,
+    #000000 0%,        /* púrpura oscuro */
+    #a629ff 20%,      /* púrpura brillante */
+    #1c4b6b 40%,      /* azul medio */
+    #5a8a9a 50%,      /* azul claro (reflejo) */
+    #1c4b6b 60%,      /* azul medio */
+    #2d5a27 80%,      /* verde medio */
+    #000000 100%      /* verde claro (reflejo) */
+  );
+  color: #eaeaea;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.logo {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  background-image: url("./assets/herops1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+span {
+  font-weight: bold;
+}
+
+h1,
+h2 {
+  text-align: center;
+  font-family: "Michroma", sans-serif;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+.tagline {
+  font-family: "Black Ops One", system-ui;
+  text-align: center;
+  font-size: 30px;
+}
+
+p {
+  font-family: "Elms Sans", sans-serif;
+  font-size: 25px;
+  letter-spacing: 2px;
+  line-height: 1.6;
+}
+
+ul {
+  font-size: 25px;
+  margin-left: 30%;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav {
+  background: linear-gradient(90deg, #00ffff, #ff00ff, #ffff00, #00ff66);
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  text-align: center;
+}
+
+.navbar a {
+  font-family: "Black Ops One", system-ui;
+  color: white;
+  text-decoration: none;
+  text-shadow:
+    2px 2px 0 black,
+    -2px 2px 0 black,
+    2px -2px 0 black,
+    -2px -2px 0 black;
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.description .intro {
+  margin-left: 5px;
+  margin-right: 35px;
+}
+
+.description > p {
+  font-family: "Elms Sans", sans-serif;
+  font-size: 40px;
+}
+
+/* =========================
+   START SECTION
+========================= */
+
+.start {
+  padding: 90px 20px 210px;  /* ← menos padding abajo */
+  min-height: auto;         /* ← quita el 520px */
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto; /* ← filas automáticas, no fijas */
+  align-items: center;
+}
+
+.start h2 {
+  margin-top: -6px;
+
+  font-family: "Elms Sans", sans-serif;
+  font-size: 35px;
+  text-align: center;
+  
+
+ 
+}
+
+.start p {
+  font-family: "Elms Sans", sans-serif;
+  font-size: 28px;
+  text-align: center;
+  max-width: 850px;
+  margin: 25px auto;
+  line-height: 1.4;
+  text-shadow:
+   
+  
+  
+}
+
+.start ul {
+  font-family: "Elms Sans", sans-serif;
+  font-size: 24px;
+  max-width: 620px;
+  margin: 35px auto;
+  line-height: 1.5;
+  margin-left: 50px;
+  
+}
+
+.start li {
+  margin-bottom: 12px;
+ 
+}
+
+/* =========================
+   Grid
+========================= */
+.parrafos-ul-titulo {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: start;
+}
+
+
+/* =========================
+   START BACKGROUND IMAGES
+========================= */
+
+.start-img {
+  width: 100%;
+  height: 100%; /* ← cubre toda la celda */
+  object-fit: cover; /* ← recorta sin deformar */
+  object-position: center; /* ← centra la imagen */
+}
+
+.start-img.top-left {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.start-img.bottom-right {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+/* =========================
+   EMULATORS / FIGHTCADE
+========================= */
+
+.emulators::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.fcade {
+  width: 60%;
+  display: block;
+  margin: 30px auto;
+}
+
+.fcade2 {
+  width: 30%;
+  float: left;
+  margin: 20px 30px 20px 0;
+}
+
+.ryu {
+  width: 55%;
+  float: right;
+  clear: both;
+  margin: 40px 0 20px 30px;
+}
+
+.official-link,
+.official-link:visited {
+  display: block;
+  text-align: center;
+  font-family: "Black Ops One", system-ui;
+  font-size: 25px;
+  margin: 30px auto;
+  text-decoration: none;
+  color: #ff00ff;
+  text-shadow:
+    2px 2px 0 black,
+    -2px 2px 0 black,
+    2px -2px 0 black,
+    -2px -2px 0 black,
+    4px 4px 0 black;
+}
+
+/* =========================
+   📱 MÓVIL
+========================= */
+
+@media (max-width: 480px) {
+  .fcade,
+  .fcade2,
+  .ryu,
+  .intro {
+    float: none;
+    clear: none;
+    width: 90%;
+    display: block;
+    margin: 25px auto;
+  }
+
+  .fcade {
+    width: 85%;
+  }
+
+  ul {
+    margin-left: 20px;
+    padding-left: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .logo {
+    width: 280px;
+    height: 280px;
+  }
+
+  .description > p {
+    font-family: "Elms Sans", sans-serif;
+    font-size: 30px;
+  }
+
+  .navbar {
+    display: block;
+    text-align: center;
+  }
+
+  .navbar a {
+    display: block;
+    padding: 8px 0;
+  }
+
+  .start {
+    padding: 40px 20px;
+    min-height: auto;
+    display: block !important;
+    position: relative;
+  }
+
+  .start h2 {
+    padding-top: 20px;
+    font-size: 28px;
+  }
+
+  .start p {
+    font-size: 24px;
+  }
+
+  .start ul {
+    font-size: 22px;
+    max-width: 100%;
+    padding-left: 25px;
+  }
+
+  .start-img {
+    position: absolute;
+    width: 220px;
+    height: auto;
+    transform: none;
+  }
+
+  .top-left {
+    top: 20px;
+    left: -60px;
+  }
+
+  .bottom-right {
+    bottom: 20px;
+    right: -60px;
+  }
+
+  .parrafos-ul-titulo h2,
+  .parrafos-ul-titulo p,
+  .parrafos-ul-titulo ul {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+/* =========================
+   TABLET / MEDIUM
+========================= */
+
+@media (min-width: 481px) and (max-width: 1200px) {
+  .description .intro {
+    float: left;
+    width: 40%;
+  }
+}
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 1201px) {
+  .description .intro {
+    float: left;
+    width: 30%;
+  }
+}
